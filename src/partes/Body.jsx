@@ -2,6 +2,7 @@ import React from 'react'
 import Count from '../Function'
 import { Imagen } from '../Function';
 import contacts from './contacts'
+import emojipedia from './emojipedia'
 
 export function Body() {
     return (
@@ -26,13 +27,23 @@ export function Body() {
             <div className='contacts'>
                 {contacts.map(cont => (
                     <div className='cont' key={cont.id}>
-                        <p>Nombre: {cont.name}</p>
+                        <p style={{fontSize: '25px', color: 'yellow'}}>Nombre: {cont.name}</p>
                         <img style={{borderRadius: '45px'}} src={cont.imgURL} alt={cont.name} />
                         <p>Phone: {cont.phone}</p>
                         <p>Email: {cont.email}</p>
                     </div>
                 ))}
             </div>
+            <div className='emoji'>
+                {emojipedia.map(emoji => (
+                    <div className='contemoji' key={emoji.id}>
+                        <p style={{fontSize: '60px', display: 'flex', justifyContent: 'center'}}>{emoji.emoji}</p>
+                        <p style={{fontSize: '25px', color: 'yellow' , display: 'flex', justifyContent: 'center'}}>{emoji.name}</p>
+                        <p style={{display: 'flex', justifyContent: 'center'}}>{emoji.meaning}</p>
+                    </div>
+                ))}
+            </div>
+
 
             <footer className='footer'>Hecho por Senas</footer>
         </div>

@@ -112,3 +112,16 @@
 	margin: 10px;
 	padding: 50px;
 }
+
+.emoji {
+	display: flex;
+	color: white;
+	font-size: 16px;
+}
+
+.contemoji {
+	border: 1px solid #ccc;
+	border-color: orangered;
+	margin: 20px;
+	padding: 50px;
+}
